@@ -4,6 +4,7 @@
   "description": "API for the Style code generator",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/matt3188/tfa-style-code-api/issues"
   },
-  "homepage": "https://github.com/matt3188/tfa-style-code-api#readme"
+  "homepage": "https://github.com/matt3188/tfa-style-code-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+  }
 }
