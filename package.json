@@ -1,0 +1,19 @@
+{
+  "name": "style-code-api",
+  "version": "1.0.0",
+  "description": "API for the Style code generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/matt3188/tfa-style-code-api.git"
+  },
+  "author": "Matt Coleman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matt3188/tfa-style-code-api/issues"
+  },
+  "homepage": "https://github.com/matt3188/tfa-style-code-api#readme"
+}
