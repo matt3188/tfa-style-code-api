@@ -12,7 +12,7 @@ var corsOptions = {
 }
 
 mongoose.Promise = global.Promise
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/StyleCodedb') 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/StyleCodedb')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
