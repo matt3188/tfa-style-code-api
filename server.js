@@ -18,20 +18,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors(corsOptions));
 
-app.post('/style-codes', (req, res) => {
-  if (!req.body) {
-    return res.status(400).json({
-      status: 'error',
-      error: 'req body cannot be empty',
-    });
-  }
-
-  res.status(200).json({
-    status: 'succes',
-    data: req.body,
-  })
-});
-
 const routes = require('./api/routes/styleCodeRoutes')
 routes(app)
 
