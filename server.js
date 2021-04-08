@@ -1,7 +1,33 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
+const mongoose = require('mongoose')
+const Task = require('./api/models/styleCodeModel')
+const bodyParser = require('body-parser')
+const cors = require("cors");
 
-app.listen(port);
+var corsOptions = {
+  origin: process.env.APP_URL || 'http://localhost:8080'
+}
 
-console.log('RESTful API server started on: ' + port);
+mongoose.Promise = global.Promise
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/StyleCodedb') 
+
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+app.use(cors(corsOptions));
+
+const routes = require('./api/routes/styleCodeRoutes')
+routes(app)
+
+app.use(function(req, res) {
+  res.status(404).send({url: req.originalUrl + ' not found'})
+})
+
+app.listen(port)
+
+console.log('RESTful API server started on: ' + port)
+
+// tfa-user
+// ZwZ193SbgEUtLGoD
