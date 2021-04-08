@@ -28,6 +28,3 @@ app.use(function(req, res) {
 app.listen(port)
 
 console.log('RESTful API server started on: ' + port)
-
-// tfa-user
-// ZwZ193SbgEUtLGoD
