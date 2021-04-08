@@ -19,7 +19,7 @@ app.use(bodyParser.json())
 app.use(cors(corsOptions));
 
 app.post('/style-codes', (req, res) => {
-  if (!req.body.name) {
+  if (!req.body) {
     return res.status(400).json({
       status: 'error',
       error: 'req body cannot be empty',
